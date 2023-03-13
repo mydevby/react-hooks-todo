@@ -10,9 +10,10 @@ const App = () => {
   const { todos, addTodo, deleteTodo } = useTodoState([]);
 
   return (
-    <div className="App">
-      <Typography component="h1" variant="h2">
-        Todos
+    <main className="main">
+      <section className="todo">
+      <Typography className="title" component="h1" variant="h2">
+        Список задач
       </Typography>
 
       <TodoForm
@@ -26,7 +27,8 @@ const App = () => {
       />
 
       <TodoList todos={todos} deleteTodo={deleteTodo} />
-    </div>
+      </section>
+    </main>
   );
 };
 
